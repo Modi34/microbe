@@ -1,6 +1,14 @@
 # microbe
 200 bytes js templating engine for browser and node
 
+input
+
+![](https://i.imgur.com/HVuDykf.png)
+
+output
+
+![](https://i.imgur.com/Yxtij8c.png)
+
 ##How to use:
 1.	Paste minified source into your code
 ```javascript
