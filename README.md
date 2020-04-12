@@ -9,9 +9,9 @@ output
 
 ![](https://i.imgur.com/Yxtij8c.png)
 
-[live demo on jsbin](https://jsbin.com/zawimed/edit?js,output).
+## [live demo on jsbin](https://jsbin.com/zawimed/edit?js,output).
 
-##How to use:
+### How to use:
 1.	Paste minified source into your code
 ```javascript
 let m=(...t)=>{t.map(e=>window[e]=(...p)=>n(e,p));let n=(t,p,a,d=document)=>(t=d.createElement(t),p.map(e=>{if((a=e.blur)||e.big){t.appendChild(a?e:d.createTextNode(e))}else for(a in e)t[a]=e[a]}),t)}
@@ -27,7 +27,7 @@ A({ href: 'http://m' }, 'hello world',
 )
 ```
 
-##Few things to note:
+### Few things to note:
 
 You can use lower case 
 ```javascript
@@ -41,7 +41,7 @@ any string will produce text node, any dom node will be appended, any object wil
 
 you can use as many params as you need and they can be added in any order
 
-##How it works:
+### How it works:
 
 Generally it’s a simple wrapper over .createElement, .createTextNode, .appendChild and .setAttribute
 
