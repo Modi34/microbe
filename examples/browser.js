@@ -1,4 +1,4 @@
-let m=(...t)=>{t.map(e=>window[e]=(...p)=>n(e,p));let n=(t,p,a,d=document)=>(t=d.createElement(t),p.map(e=>{if((a=e.blur)||e.big){t.appendChild(a?e:d.createTextNode(e))}else for(a in e)t[a]=e[a]}),t)}
+let m=(...t)=>t.map(t=>window[t]=(...p)=>((n,a,d=document)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(a in e)n[a]=e[a]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))())
 
 m('DIV', 'A', 'B', 'UL', 'LI', 'I', 'H1', 'style', 'script');
 
