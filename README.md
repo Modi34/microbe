@@ -14,7 +14,7 @@ output
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-var m=(...t)=>t.map(t=>window[t]=(...p)=>((n,d=document)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(d in e)n[d]=e[d]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))())
+let m=(...t)=>t.map(t=>window[t]=(...p)=>((n,a,d=document)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(a in e)n[a]=e[a]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))())
 ```
 2.	Call m function to declare tags you need
 ```javascript
