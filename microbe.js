@@ -5,7 +5,7 @@ const microbe = {
     params.flat().map( param => {
       if (param.constructor==Object) {
         for (let attr in param) {
-          node.setAttribute(attr, param[attr])
+          node[attr] = param[attr]
         }
       } else {
         node.appendChild( param.after ? param : document.createTextNode(param) )
