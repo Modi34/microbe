@@ -9,7 +9,8 @@ output
 
 ![](https://i.imgur.com/Yxtij8c.png)
 
-## [live demo on jsbin](https://jsbin.com/zawimed/edit?js,output).
+
+<iframe width="100%" height="300" src="//jsfiddle.net/Modi34/6g3ew7n1/6/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ### How to use:
 1.	Paste minified source into your code
