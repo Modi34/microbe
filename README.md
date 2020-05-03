@@ -14,7 +14,7 @@ output
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-let m=(...t)=>t.map(t=>window[t]=(...p)=>((n,a,d=document)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(a in e)n[a]=e[a]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))())
+let m=(...t)=>t.map((t,a,n,d=document)=>window[t]=(...p)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(a in e)n[a]=e[a]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))
 ```
 2.	Call m function to declare tags you need
 ```javascript
@@ -50,17 +50,3 @@ any other type will produce a textNode (string, int, bool etc) -
 ```html
 div(true, 7) == <div>true7</div>
 ```
-
-### How it works:
-
-Generally it’s a simple wrapper over .createElement, .createTextNode, .appendChild and .setAttribute
-
-The only tricky thing about it is this line
-```javascript
-tags.map(tag => window[tag] = (...params) => microbe.new(tag, params)),
-```
-function in this loop creates global variables from params and sets very simple [curry](https://en.wikipedia.org/wiki/Currying) function in to it.
-Curry function does 3 things:
-It collects params, caches current tag in its scope, calls wrapper to parse params.
-
-To use it in node you will need jsdom dependency or something similar – check out examples
