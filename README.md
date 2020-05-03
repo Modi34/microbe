@@ -10,7 +10,7 @@ output
 ![](https://i.imgur.com/Yxtij8c.png)
 
 
-<iframe width="100%" height="300" src="//jsfiddle.net/Modi34/6g3ew7n1/6/embedded/js,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+## [live demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/6/).
 
 ### How to use:
 1.	Paste minified source into your code
