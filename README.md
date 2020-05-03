@@ -1,5 +1,4 @@
 # microbe
-250 bytes js templating engine for browser and node
 
 input
 
