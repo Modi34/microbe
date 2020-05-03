@@ -4,13 +4,21 @@ const microbe = {
     let node = document.createElement(tag);
     params.flat().map( param => {
       if (param.constructor==Object) {
-        for (let attr in param) {
-          node[attr] = param[attr]
-        }
+        microbe.parse(param, node)
       } else {
+        param.call? param(node) :
         node.appendChild( param.after ? param : document.createTextNode(param) )
       }
     })
     return node
-  }
+  },
+  parse(obj, node){
+    for(let i in obj){
+     if(obj[i].constructor == Object){
+      microbe.parse(obj[i], node[i])
+     }else{
+      node[i] = obj[i]
+     }
+    }
+   }
 }
