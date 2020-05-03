@@ -1,5 +1,5 @@
 # microbe
-200 bytes js templating engine for browser and node
+250 bytes js templating engine for browser and node
 
 input
 
@@ -14,7 +14,7 @@ output
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-let m=(...t)=>t.map((t,a,n,d=document)=>window[t]=(...p)=>(n=d.createElement(t),p.flat().map(e=>{if(e.constructor==Object){for(a in e)n[a]=e[a]}else n.appendChild(e.after?e:d.createTextNode(e))}),n))
+let m=(...t)=>t.map((t,a,n,d=document,x=(e,n)=>{for(a in e)z(e[a])?x(e[a],n[a]):n[a]=e[a]},z=e=>e.constructor==Object)=>window[t]=(...p)=>(n=d.createElement(t),p.flat().map(e=>z(e)?x(e,n):e.call?e(n):n.appendChild(e.after?e:d.createTextNode(e))),n))
 ```
 2.	Call m function to declare tags you need
 ```javascript
@@ -45,6 +45,12 @@ div(['hello', ' ', world], ' some text') == <div>hello world some text</div>
 objects are parsed and key => value is set to newly created dom element -
 ```html
 div({id: 'test'}) == <div id="test"></div>
+// objects are parsed recursively
+div({id: 'test', dataset{id: "new"}}) == <div id="test" data-id="new"></div>
+```
+functions will be called with current node as parameter
+```javascript
+div(node=>node.classList.add('test')) == <div class="test"></div>
 ```
 any other type will produce a textNode (string, int, bool etc) - 
 ```html
