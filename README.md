@@ -46,7 +46,7 @@ objects are parsed and key => value is set to newly created dom element -
 ```javascript
 div({id: 'test'}) == <div id="test"></div>
 // objects are parsed recursively
-div({id: 'test', dataset{id: "new"}}) == <div id="test" data-id="new"></div>
+div({id: 'test', dataset: {id: "new"}}) == <div id="test" data-id="new"></div>
 ```
 functions will be called with current node as parameter
 ```javascript
