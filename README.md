@@ -1,14 +1,5 @@
 # microbe
 
-input
-
-![](https://i.imgur.com/HVuDykf.png)
-
-output
-
-![](https://i.imgur.com/Yxtij8c.png)
-
-
 ## [live demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/6/).
 
 ### How to use:
