@@ -5,7 +5,7 @@
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-let m=(...t)=>t.map((t,a,n,d=document,x=(e,n)=>{for(a in e)z(e[a])?x(e[a],n[a]):n[a]=e[a]},z=e=>e.constructor==Object)=>window[t]=(...p)=>(n=d.createElement(t),p.flat().map(e=>z(e)?x(e,n):e.call?e(n):n.appendChild(e.after?e:d.createTextNode(e))),n))
+let m=(...t)=>t.map((m,i,c,r,o=document,b=Object)=>window[m]=(...p)=>(i=o.createElement(m),p.flat().map(e=>e.constructor==b?b.assign(i,e):e.call?e(i):i.appendChild(e.after?e:o.createTextNode(e))),i))
 ```
 2.	Call m function to declare tags you need
 ```javascript
