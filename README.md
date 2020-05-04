@@ -1,6 +1,6 @@
 # microbe
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/25/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/30/).
 
 ### How to use:
 1.	Paste minified source into your code
@@ -36,16 +36,14 @@ div(['hello', ' ', world], ' some text') == <div>hello world some text</div>
 objects are parsed and key => value is set to newly created dom element -
 ```javascript
 div({id: 'test'}) == <div id="test"></div>
-// objects are parsed recursively
-div({id: 'test', dataset: {id: "new"}}) == <div id="test" data-id="new"></div>
 ```
 functions will be called with current node as parameter
 ```javascript
-div(node=>node.classList.add('test')) == <div class="test"></div>
+div(node=>node.dataset.id='test') == <div data-id="test"></div>
 ```
 any other type will produce a textNode (string, int, bool etc) - 
 ```javascript
 div(true, 7) == <div>true7</div>
 ```
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/25/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/30/).
