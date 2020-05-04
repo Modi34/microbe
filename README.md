@@ -1,6 +1,6 @@
 # microbe
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/10/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/15/).
 
 ### How to use:
 1.	Paste minified source into your code
@@ -48,4 +48,4 @@ any other type will produce a textNode (string, int, bool etc) -
 div(true, 7) == <div>true7</div>
 ```
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/10/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/15/).
