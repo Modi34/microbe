@@ -7,5 +7,5 @@ const microbe = (...tags) => {
         node.appendChild( param.after ? param : document.createTextNode(param) )
     })
     return node
-  }
+  })
 }
