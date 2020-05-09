@@ -1,6 +1,6 @@
 # microbe
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/37/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/45/).
 
 ### How to use:
 1.	Paste minified source into your code
