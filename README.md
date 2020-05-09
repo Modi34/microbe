@@ -31,7 +31,7 @@ you can use as many params as you need and they can be added in any order
 
 arrays are flattened - 
 ```javascript
-div(['hello', ' ', world], ' some text') == <div>hello world some text</div>
+div(['hello ', 'world'], ' some text') == <div>hello world some text</div>
 ```
 objects are parsed and key => value is set to newly created dom element -
 ```javascript
