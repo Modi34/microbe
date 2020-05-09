@@ -1,11 +1,11 @@
 # microbe
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/56/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/58/).
 
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-m=(...t)=>t.map((m,i,crob,e=Object)=>this[m]=(...p)=>(i=document.createElement(m),p.map(m=>m.constructor==e?e.assign(i,m):m.call?m(i):i.append(m)),i))
+m=(...t)=>t.map((m,i,c,r=Object)=>this[m]=(...p)=>(i=document.createElement(m),p.map(m=>m.constructor==r?r.assign(i,m):m.call?m(i):i.append(m)),i))
 ```
 2.	Call m function to declare tags you need
 ```javascript
