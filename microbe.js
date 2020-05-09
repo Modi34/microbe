@@ -1,5 +1,5 @@
 const microbe = (...tags) => {
-  tags.map(tag => window[tag] = (...params) => {
+  tags.map(tag => this[tag] = (...params) => {
     let node = document.createElement(tag);
     params.flat().map( param => {
         param.constructor==Object? Object.assign(node, param) :
