@@ -4,7 +4,7 @@ const microbe = (...tags) => {
     params.flat().map( param => {
         param.constructor==Object? Object.assign(node, param) :
         param.call? param(node) :
-        node.appendChild( param.after ? param : document.createTextNode(param) )
+        node.appendChild( param )
     })
     return node
   })
