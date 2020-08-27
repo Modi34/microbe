@@ -3,7 +3,7 @@ const microbe = (...tags) => {
     let node = document.createElement(tag);
     params.map( param => {
         param+'' == {} ? Object.assign(node, param) :
-        param.call? param(node) :
+        param && param.call? param(node) :
         node.append( param )
     })
     return node
