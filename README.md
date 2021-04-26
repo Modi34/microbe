@@ -1,11 +1,11 @@
 # microbe
 
-## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/75/).
+## [Demo on jsfiddle](https://jsfiddle.net/Modi34/6g3ew7n1/77/).
 
 ### How to use:
 1.	Paste minified source into your code
 ```javascript
-m=(...n)=>n.map(t=>this[t]=(...p)=>(n=document.createElement(t),p.map(p=>p+''=={}?Object.assign(n,p):p&&p.call?p(n):n.append(p)),n))
+m=(...n)=>n.map(t=>this[t]=(...p)=>(n=document.createElement(t),p.map(p=>p+''=={}?Object.assign(n,p):n.append(p)),n))
 ```
 2.	Call m function to declare tags you need
 ```javascript
@@ -20,7 +20,7 @@ A({ href: 'http://m' }, 'hello world',
 
 ### Few things to note:
 
-You can use lower case 
+You can use lower case
 ```javascript
 m('div', 'a', 'b', 'ul', 'li', 'i', 'h1');
 ```
@@ -33,11 +33,7 @@ objects are parsed and key => value is set to newly created dom element -
 ```javascript
 div({id: 'test'}) == <div id="test"></div>
 ```
-functions will be called with current node as parameter
-```javascript
-div(node=>node.dataset.id='test') == <div data-id="test"></div>
-```
-any other type will produce a textNode (string, int, bool etc) - 
+any other type will produce a textNode (string, int, bool etc) -
 ```javascript
 div(true, 7) == <div>true7</div>
 div(['hello ', 'world'], ' some text') == <div>hello world some text</div>
